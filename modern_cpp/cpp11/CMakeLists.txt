@@ -16,6 +16,7 @@ add_executable(cpp11_shared_mutex        shared_mutex.cpp)
 add_executable(cpp11_function_bind       function_bind.cpp)
 add_executable(cpp11_variadic_template   variadic_template.cpp)
 add_executable(cpp11_enum_class          enum_class.cpp)
+add_executable(cpp11_memory_order        memory_order.cpp)
 
 # 线程库链接
 find_package(Threads REQUIRED)
@@ -23,3 +24,4 @@ target_link_libraries(cpp11_threading        Threads::Threads)
 target_link_libraries(cpp11_atomic           Threads::Threads)
 target_link_libraries(cpp11_recursive_mutex  Threads::Threads)
 target_link_libraries(cpp11_shared_mutex     Threads::Threads)
+target_link_libraries(cpp11_memory_order     Threads::Threads)
