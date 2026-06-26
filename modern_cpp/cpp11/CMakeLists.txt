@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.16)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(cpp11_auto_decltype       auto_decltype.cpp)
+add_executable(cpp11_lambda              lambda.cpp)
+add_executable(cpp11_rvalue_move         rvalue_move.cpp)
+add_executable(cpp11_smart_ptr           smart_ptr.cpp)
+add_executable(cpp11_range_for_init_list range_for_init_list.cpp)
+add_executable(cpp11_nullptr_constexpr   nullptr_constexpr.cpp)
+add_executable(cpp11_threading           threading.cpp)
+add_executable(cpp11_atomic              atomic.cpp)
+add_executable(cpp11_recursive_mutex     recursive_mutex.cpp)
+add_executable(cpp11_shared_mutex        shared_mutex.cpp)
+add_executable(cpp11_function_bind       function_bind.cpp)
+add_executable(cpp11_variadic_template   variadic_template.cpp)
+add_executable(cpp11_enum_class          enum_class.cpp)
+
+# 线程库链接
+find_package(Threads REQUIRED)
+target_link_libraries(cpp11_threading        Threads::Threads)
+target_link_libraries(cpp11_atomic           Threads::Threads)
+target_link_libraries(cpp11_recursive_mutex  Threads::Threads)
+target_link_libraries(cpp11_shared_mutex     Threads::Threads)
