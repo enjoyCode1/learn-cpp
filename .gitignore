@@ -1,4 +1,5 @@
 build/
+build_cpp23/
 *.exe
 *.obj
 *.pdb
