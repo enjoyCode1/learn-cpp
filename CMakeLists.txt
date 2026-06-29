@@ -12,6 +12,7 @@ add_subdirectory(modern_cpp/cpp11)
 add_subdirectory(modern_cpp/cpp14)
 add_subdirectory(modern_cpp/cpp17)
 add_subdirectory(modern_cpp/cpp20)
+add_subdirectory(modern_cpp/cpp23)
 
 # STL
 add_subdirectory(stl/usage)
