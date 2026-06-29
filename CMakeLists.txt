@@ -20,3 +20,6 @@ add_subdirectory(stl/implementation)
 
 # Algorithms
 add_subdirectory(algorithms)
+
+# Data Structures
+add_subdirectory(data_structures)

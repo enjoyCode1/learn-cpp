@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.14)
+
+add_executable(ds_array       array.cpp)
+add_executable(ds_vector      vector.cpp)
+add_executable(ds_list        list.cpp)
+add_executable(ds_stack       stack.cpp)
+add_executable(ds_queue       queue.cpp)
+add_executable(ds_deque       deque.cpp)
+
+foreach(target ds_array ds_vector ds_list ds_stack ds_queue ds_deque)
+    target_compile_features(${target} PRIVATE cxx_std_17)
+    if(MSVC)
+        target_compile_options(${target} PRIVATE /utf-8 /W4)
+    endif()
+endforeach()

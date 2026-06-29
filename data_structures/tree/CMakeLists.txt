@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.14)
+
+add_executable(ds_binary_tree  binary_tree.cpp)
+add_executable(ds_bst          bst.cpp)
+add_executable(ds_avl          avl.cpp)
+add_executable(ds_red_black    red_black.cpp)
+add_executable(ds_trie         trie.cpp)
+add_executable(ds_segment_tree segment_tree.cpp)
+add_executable(ds_bit          bit.cpp)
+add_executable(ds_heap         heap.cpp)
+
+foreach(target ds_binary_tree ds_bst ds_avl ds_red_black ds_trie ds_segment_tree ds_bit ds_heap)
+    target_compile_features(${target} PRIVATE cxx_std_17)
+    if(MSVC)
+        target_compile_options(${target} PRIVATE /utf-8 /W4)
+    endif()
+endforeach()
