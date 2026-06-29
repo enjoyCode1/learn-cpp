@@ -35,7 +35,7 @@ void relaxed_counter_demo() {
     for (int i = 0; i < 4; ++i) {
         threads.emplace_back([&]() {
             for (int j = 0; j < 10000; ++j)
-                counter.fetch_add(1, std::memory_order_relaxed);
+                counter.fetch_add(1, std::memory_order_relaxed); 
         });
     }
     for (auto& t : threads) t.join();

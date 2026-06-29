@@ -58,7 +58,7 @@ class SpinLock {
 public:
     void lock() {
         bool expected = false;
-        // compare_exchange_weak 允许伪失败，搭配循环效率更高
+        // compare_exchange_weak 
         while (!flag_.compare_exchange_weak(expected, true,
                                             std::memory_order_acquire,
                                             std::memory_order_relaxed))
