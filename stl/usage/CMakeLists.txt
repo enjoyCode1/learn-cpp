@@ -8,6 +8,6 @@ if(MSVC)
     add_compile_options(/utf-8 /W4)
 endif()
 
-foreach(target vector map set algorithm iterator functional)
+foreach(target vector map set algorithm iterator functional list deque stack_queue array)
     add_executable(stl_${target} ${target}.cpp)
 endforeach()
